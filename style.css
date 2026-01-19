@@ -86,6 +86,13 @@ p{
     display: flex;
     gap: 16px;
     align-items: center;
+    transition: .3s ease;
+ }
+
+ .primery:hover{
+   transform: scale(1.05);
+   transition: .3s ease;
+    /* background: linear-gradient(45deg, rgba(145, 0, 248, 1) 0%, rgba(251, 9, 180, 1) 50%, rgba(247, 233, 63, 1) 100%); */
  }
 
  button i{
@@ -96,6 +103,12 @@ p{
    background: #ffffff00;
    border: 2px solid #00FF88;
    color: #00FF88;
+   transition: .3s ease;
+ }
+
+ .secondary:hover{
+   transform: scale(1.05);
+   transition: .3s ease;
  }
 
  #hero{
@@ -308,28 +321,23 @@ footer .container{
    flex-wrap: wrap;
 }
 
-/* ------------------------ Episod section --------------------------- */
+/* ------------------------ Podcast section --------------------------- */
 
-.featured-episodes {
-  max-width: 1200px;
-  margin: auto;
-  padding: 80px 24px;
+#podcast{
+   padding: 80px 20px 0px 40px;
+}
+#podcast h2{
+   text-align: center;
 }
 
-.section-title {
-  text-align: center;
-  font-size: 48px;
-  font-weight: 800;
-  margin-bottom: 48px;
-}
-
-.episodes-grid {
+.podcasts-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 24px;
+  margin-top: 40px;
 }
 
-.episode-card {
+.podcast-card {
   background: #2a0e4f;
   border-radius: 28px;
   overflow: hidden;
@@ -337,34 +345,22 @@ footer .container{
   flex-direction: column;
 }
 
-/* Video */
-.episode-media {
+.podcast-media {
   position: relative;
   aspect-ratio: 16 / 9;
 }
 
-.episode-media iframe {
+.podcast-media iframe {
   width: 100%;
   height: 100%;
   border: none;
 }
 
-/* Content */
-.episode-content {
-  padding: 28px;
-}
-
-.episode-content h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-.episode-content p {
-  font-size: 15px;
-  line-height: 1.6;
-  color: #d1d1d1;
-  margin-bottom: 16px;
+.podcast-content {
+   display: flex;
+   flex-direction: column;
+   gap: 24px;
+  padding: 24px;
 }
 
 .duration {
@@ -374,6 +370,41 @@ footer .container{
 
 /* ========================= Tablet Devices ========================= */
 @media (max-width: 992px) {
+
+   h1{
+      font-size: 56px;
+   }
+
+   h2{
+      font-size: 40px;
+   }
+
+   nav ul{
+      display: none;
+   }
+
+   header button{
+    display: none;
+  }
+
+  .mobile-menu-icon{
+    display: block;
+  }
+  .mobile-menu-icon a i{
+    font-size: 20px;
+  }
+   .podcasts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+   footer{
+   padding: 80px 20px;
+   text-align: center;
+ }
+
+  .footer-logo img{
+   max-width: 40%;
+}
   
 }
 
@@ -468,11 +499,11 @@ header .logo img{
    padding: 40px 20px;
 }
 
-/* #hero .hero-image{
-   width: 200px;
-   height: 200px;
- } */
- /* .hero-image> img{
-   max-width: 50px;
- } */
+#podcast{
+   padding: 40px 20px 0px 40px;
+}
+
+.podcasts-grid {
+    grid-template-columns: 1fr;
+  }
 }
