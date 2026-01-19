@@ -138,13 +138,85 @@ p{
 }
 
 
- .hero-buttons{
+.hero-buttons{
    display: flex;
    gap: 24px;
  }
+#about{
+   padding: 40px 20px 80px 20px;
+}
+#about .container{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+   gap: 24px;
+}
 
 
+.stats{
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 20px;
+   padding-top: 40px;
+   border-top: 1px solid #261241;
+}
 
+.stats h3{
+   font-size: 48px;
+   font-weight: 900;
+   margin-bottom: 10px;
+   color: #00FF88;
+}
+
+
+#why-us{
+   background: #230E3D;
+   padding: 80px 20px;
+}
+
+#why-us h2{
+   text-align: center;
+}
+
+.cards{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 24px;
+   margin-top: 40px;
+}
+
+
+.card{
+   background-color: #1a0a2e;
+   padding: 40px;
+   border-radius: 32px;
+   display: flex;
+   flex-direction: column;
+   gap:20px;
+   justify-content: center;
+}
+
+.card img{
+   max-width: 60px;
+   max-height: 60px;
+   object-fit: contain;
+}
+
+.card-1{
+   grid-row: span 2;
+}
+.card-2{
+   grid-column: span 2;
+}
+
+.card-3{
+   grid-column: span 2;
+}
+
+.card-4{
+   grid-column: span 2;
+}
 
 
 
@@ -155,8 +227,14 @@ p{
 
 
 /* ========================= Small Mobile ========================= */
-@media (max-width: 576px) {
-  nav ul{
+@media (max-width: 576px){
+   h1{
+      font-size: 48px;
+   }
+   h2{
+      font-size: 32px;
+   }
+   nav ul{
     display: none;
   }
 
@@ -167,4 +245,29 @@ p{
   .mobile-menu-icon{
     display: block;
   }
+
+  .stats{
+   grid-template-columns: repeat(2, 1fr);
+   gap: 20px;
+   padding-top: 40px;
+   border-top: 1px solid #261241;
+ }
+
+ .stats h3{
+   font-size: 24px;
+ }
+ .cards{
+   grid-template-columns: repeat(1, 1fr);
+}
+ .card{
+   width: 100%;
+ }
+
+ .card-1,
+ .card-2,
+ .card-3,
+ .card-4{
+   grid-column: span 1;
+   grid-row: span 1;
+ }
 }
